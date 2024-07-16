@@ -35,7 +35,7 @@ ORDER BY major, gpa DESC;
 -- 각 평점을 받은 학생이 몇명인지,
 -- 전공별로 나누어 출력하되,
 --  총 인원이 30명이 넘는 자료만 출력하는 SQL을 작성하시오.
-SELECT gpa, major, COUNT(*)
+SELECT gpa AS score, major, COUNT(*) AS student_count  -- Alias
 FROM student
 GROUP BY major, gpa
 HAVING COUNT(*) > 30
