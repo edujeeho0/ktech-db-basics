@@ -79,3 +79,9 @@ FROM user
 GROUP BY country
 -- 집계 결과로 데이터를 필터링하고 싶으면
 HAVING AVG(age) >= 45;
+
+-- 주석 제거 버전
+SELECT country, AVG(age)
+FROM user
+GROUP BY country
+HAVING AVG(age) >= 45;
